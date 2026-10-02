@@ -1,0 +1,120 @@
+{
+  "child_address_space_limit_bytes": 2147483648,
+  "claim": "Finite exact-rational replay; not a mechanized general proof.",
+  "optimized_python_level": 1,
+  "parent_cpu_seconds": 0.051857471000000044,
+  "peak_child_rss_kib": 156524,
+  "python_runtime": "results/python-runtime.json",
+  "python_version": "3.13.5",
+  "status": "passed",
+  "steps": [
+    {
+      "child_cpu_seconds": 0.6296999999999999,
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "src/bibliography_audit.py"
+      ],
+      "exit_code": 0,
+      "optimization_level": 0,
+      "python_version": "3.13.5",
+      "stderr": "results/bibliography.stderr.txt",
+      "stdout": "results/bibliography.stdout.txt",
+      "timed_out": false,
+      "wall_seconds": 0.6698032300000136
+    },
+    {
+      "child_cpu_seconds": 4.839307999999999,
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "optimization_level": 0,
+      "python_version": "3.13.5",
+      "stderr": "results/tests.stderr.txt",
+      "stdout": "results/tests.stdout.txt",
+      "timed_out": false,
+      "wall_seconds": 4.882732320999992
+    },
+    {
+      "child_cpu_seconds": 6.287157,
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "optimization_level": 1,
+      "python_version": "3.13.5",
+      "stderr": "results/tests-optimized.stderr.txt",
+      "stdout": "results/tests-optimized.stdout.txt",
+      "timed_out": false,
+      "wall_seconds": 6.335830649000002
+    },
+    {
+      "child_cpu_seconds": 7.593529000000002,
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "src.campaign"
+      ],
+      "exit_code": 0,
+      "optimization_level": 0,
+      "python_version": "3.13.5",
+      "stderr": "results/campaign.stderr.txt",
+      "stdout": "results/campaign.stdout.txt",
+      "timed_out": false,
+      "wall_seconds": 7.636479661999999
+    },
+    {
+      "child_cpu_seconds": 1.5559059999999996,
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "independent_oracle.py",
+        "--suite",
+        "inputs/suite.json",
+        "--certificates",
+        "results/certificates.json"
+      ],
+      "exit_code": 0,
+      "optimization_level": 0,
+      "python_version": "3.13.5",
+      "stderr": "results/independent-oracle.stderr.txt",
+      "stdout": "results/independent-oracle.stdout.txt",
+      "timed_out": false,
+      "wall_seconds": 1.571610953000004
+    },
+    {
+      "child_cpu_seconds": 5.849568999999999,
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "src/checker.py",
+        "--suite",
+        "inputs/suite.json",
+        "--certificates",
+        "results/certificates.json"
+      ],
+      "exit_code": 0,
+      "optimization_level": 0,
+      "python_version": "3.13.5",
+      "stderr": "results/replay.stderr.txt",
+      "stdout": "results/replay.stdout.txt",
+      "timed_out": false,
+      "wall_seconds": 5.882834028000019
+    }
+  ],
+  "total_cpu_seconds": 26.807026471,
+  "wall_limit_seconds": 110,
+  "wall_seconds": 29.466104257000012,
+  "workers": 1
+}
